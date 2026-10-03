@@ -1988,3 +1988,1033 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/posts" for ::1 at 2026-10-04 00:33:43 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+  Rendered posts/_post.html.erb (Duration: 21.6ms | GC: 0.7ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.3ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | GC: 0.7ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.9ms (7 queries, 0 cached) | GC: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method 'new' for nil)
+Caused by: NoMethodError (undefined method 'new' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'new' for nil):
+    4:     <p><%= post.body %></p>
+    5:     <% if post.image.attached? %>
+    6:       <%= image_tag post.image.variant(resize_to_limit: [300, 300]).processed, class: "post-image" %>
+    7:     <% end %>
+    8:     <%= link_to "投稿詳細",  post_path(post) %>
+    9:   </div> 
+   10: <% end %>
+  
+app/views/posts/_post.html.erb:7
+app/views/posts/_post.html.erb:2
+app/views/posts/index.html.erb:3
+
+Information for cause: NoMethodError (undefined method 'new' for nil):
+  
+app/views/posts/_post.html.erb:7
+app/views/posts/_post.html.erb:2
+app/views/posts/index.html.erb:3
+Started GET "/favicon.ico" for ::1 at 2026-10-04 00:33:44 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/posts" for ::1 at 2026-10-04 00:34:01 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  Rendered posts/_post.html.erb (Duration: 19.9ms | GC: 0.4ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.4ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | GC: 0.4ms)
+Completed 200 OK in 26ms (Views: 20.9ms | ActiveRecord: 1.9ms (6 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:34:01 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+NoMethodError (undefined method 'new' for nil):
+  
+activestorage (8.1.4) app/models/active_storage/variation.rb:85:in 'ActiveStorage::Variation#transformer'
+activestorage (8.1.4) app/models/active_storage/variation.rb:58:in 'block in ActiveStorage::Variation#transform'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+activestorage (8.1.4) app/models/active_storage/variation.rb:57:in 'ActiveStorage::Variation#transform'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:49:in 'block in ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) lib/active_storage/downloader.rb:15:in 'block in ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/downloader.rb:24:in 'ActiveStorage::Downloader#open_tempfile'
+activestorage (8.1.4) lib/active_storage/downloader.rb:12:in 'ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/service.rb:92:in 'ActiveStorage::Service#open'
+activestorage (8.1.4) app/models/active_storage/blob.rb:320:in 'ActiveStorage::Blob#open'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:48:in 'ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:44:in 'ActiveStorage::VariantWithRecord#process'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:19:in 'ActiveStorage::VariantWithRecord#processed'
+activestorage (8.1.4) app/controllers/active_storage/representations/base_controller.rb:14:in 'ActiveStorage::Representations::BaseController#set_representation'
+activesupport (8.1.4) lib/active_support/callbacks.rb:362:in 'block in ActiveSupport::Callbacks::CallTemplate::MethodCall#make_lambda'
+activesupport (8.1.4) lib/active_support/callbacks.rb:179:in 'block in ActiveSupport::Callbacks::Filters::Before#call'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:36:in 'block (2 levels) in <module:Callbacks>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:180:in 'ActiveSupport::Callbacks::Filters::Before#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'block in ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'Array#each'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:119:in 'block in ActiveSupport::Callbacks#run_callbacks'
+turbo-rails (2.0.23) lib/turbo-rails.rb:24:in 'Turbo.with_request_id'
+turbo-rails (2.0.23) app/controllers/concerns/turbo/request_id_tracking.rb:10:in 'Turbo::RequestIdTracking#turbo_tracking_request_id'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.1.4) lib/action_text/rendering.rb:24:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.1.4) lib/action_text/engine.rb:72:in 'block (4 levels) in <class:Engine>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'BasicObject#instance_exec'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.1.4) lib/active_support/callbacks.rb:141:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:266:in 'AbstractController::Callbacks#process_action'
+actionpack (8.1.4) lib/action_controller/metal/rescue.rb:36:in 'ActionController::Rescue#process_action'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.1.4) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.1.4) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.1.4) lib/abstract_controller/base.rb:154:in 'AbstractController::Base#process'
+actionview (8.1.4) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.4) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.4) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.4) lib/rails/engine/lazy_route_set.rb:93:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.7) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.7) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.7) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.7) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.4) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+activerecord (8.1.4) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.4) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.4) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.7) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.7) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.7) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/host_authorization.rb:144:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.4) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (8.0.2) lib/puma/configuration.rb:305:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (8.0.2) lib/puma/response.rb:79:in 'block in Puma::Response#handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in 'Puma::ThreadPool#with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in 'Puma::Response#handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in 'Puma::Server#process_client'
+puma (8.0.2) lib/puma/server.rb:263:in 'block in Puma::Server#run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/posts" for ::1 at 2026-10-04 00:35:44 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+  Rendered posts/_post.html.erb (Duration: 25.9ms | GC: 3.8ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 26.3ms | GC: 3.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | GC: 3.8ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.6ms (7 queries, 0 cached) | GC: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined method 'new' for nil)
+Caused by: NoMethodError (undefined method 'new' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'new' for nil):
+    4:     <p><%= post.body %></p>
+    5:     <% if post.image.attached? %>
+    6:       <%= image_tag post.image.variant(resize_to_limit: [300, 300]).processed, class: "post-image" %>
+    7:     <% end %>
+    8:     <%= link_to "投稿詳細",  post_path(post) %>
+    9:   </div> 
+   10: <% end %>
+  
+app/views/posts/_post.html.erb:7
+app/views/posts/_post.html.erb:2
+app/views/posts/index.html.erb:3
+
+Information for cause: NoMethodError (undefined method 'new' for nil):
+  
+app/views/posts/_post.html.erb:7
+app/views/posts/_post.html.erb:2
+app/views/posts/index.html.erb:3
+Started GET "/posts" for ::1 at 2026-10-04 00:44:16 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::VariantRecord Load (0.3ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+  Rendered posts/_post.html.erb (Duration: 21.2ms | GC: 0.5ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 21.5ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | GC: 0.5ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 3.5ms (7 queries, 0 cached) | GC: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method 'new' for nil)
+Caused by: NoMethodError (undefined method 'new' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'new' for nil):
+    4:     <p><%= post.body %></p>
+    5:     <% if post.image.attached? %>
+    6:       <%= image_tag post.image.variant(resize_to_limit: [300, 300]).processed, class: "post-image" %>
+    7:     <% end %>
+    8:     <%= link_to "投稿詳細",  post_path(post) %>
+    9:   </div> 
+   10: <% end %>
+  
+app/views/posts/_post.html.erb:7
+app/views/posts/_post.html.erb:2
+app/views/posts/index.html.erb:3
+
+Information for cause: NoMethodError (undefined method 'new' for nil):
+  
+app/views/posts/_post.html.erb:7
+app/views/posts/_post.html.erb:2
+app/views/posts/index.html.erb:3
+Started GET "/posts" for ::1 at 2026-10-04 00:45:01 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+  Rendered posts/_post.html.erb (Duration: 24.2ms | GC: 0.1ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 24.9ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.6ms (7 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method 'new' for nil)
+Caused by: NoMethodError (undefined method 'new' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'new' for nil):
+    4:     <p><%= post.body %></p>
+    5:     <% if post.image.attached? %>
+    6:       <%= image_tag post.image.representation(resize_to_limit: [300, 300]).processed, class: "post-image" %>
+    7:     <% end %>
+    8:     <%= link_to "投稿詳細",  post_path(post) %>
+    9:   </div> 
+   10: <% end %>
+  
+app/views/posts/_post.html.erb:7
+app/views/posts/_post.html.erb:2
+app/views/posts/index.html.erb:3
+
+Information for cause: NoMethodError (undefined method 'new' for nil):
+  
+app/views/posts/_post.html.erb:7
+app/views/posts/_post.html.erb:2
+app/views/posts/index.html.erb:3
+Started GET "/posts" for ::1 at 2026-10-04 00:45:09 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  Rendered posts/_post.html.erb (Duration: 21.1ms | GC: 0.7ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 21.5ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | GC: 0.8ms)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 1.6ms (6 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:45:09 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+NoMethodError (undefined method 'new' for nil):
+  
+activestorage (8.1.4) app/models/active_storage/variation.rb:85:in 'ActiveStorage::Variation#transformer'
+activestorage (8.1.4) app/models/active_storage/variation.rb:58:in 'block in ActiveStorage::Variation#transform'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+activestorage (8.1.4) app/models/active_storage/variation.rb:57:in 'ActiveStorage::Variation#transform'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:49:in 'block in ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) lib/active_storage/downloader.rb:15:in 'block in ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/downloader.rb:24:in 'ActiveStorage::Downloader#open_tempfile'
+activestorage (8.1.4) lib/active_storage/downloader.rb:12:in 'ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/service.rb:92:in 'ActiveStorage::Service#open'
+activestorage (8.1.4) app/models/active_storage/blob.rb:320:in 'ActiveStorage::Blob#open'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:48:in 'ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:44:in 'ActiveStorage::VariantWithRecord#process'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:19:in 'ActiveStorage::VariantWithRecord#processed'
+activestorage (8.1.4) app/controllers/active_storage/representations/base_controller.rb:14:in 'ActiveStorage::Representations::BaseController#set_representation'
+activesupport (8.1.4) lib/active_support/callbacks.rb:362:in 'block in ActiveSupport::Callbacks::CallTemplate::MethodCall#make_lambda'
+activesupport (8.1.4) lib/active_support/callbacks.rb:179:in 'block in ActiveSupport::Callbacks::Filters::Before#call'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:36:in 'block (2 levels) in <module:Callbacks>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:180:in 'ActiveSupport::Callbacks::Filters::Before#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'block in ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'Array#each'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:119:in 'block in ActiveSupport::Callbacks#run_callbacks'
+turbo-rails (2.0.23) lib/turbo-rails.rb:24:in 'Turbo.with_request_id'
+turbo-rails (2.0.23) app/controllers/concerns/turbo/request_id_tracking.rb:10:in 'Turbo::RequestIdTracking#turbo_tracking_request_id'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.1.4) lib/action_text/rendering.rb:24:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.1.4) lib/action_text/engine.rb:72:in 'block (4 levels) in <class:Engine>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'BasicObject#instance_exec'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.1.4) lib/active_support/callbacks.rb:141:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:266:in 'AbstractController::Callbacks#process_action'
+actionpack (8.1.4) lib/action_controller/metal/rescue.rb:36:in 'ActionController::Rescue#process_action'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.1.4) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.1.4) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.1.4) lib/abstract_controller/base.rb:154:in 'AbstractController::Base#process'
+actionview (8.1.4) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.4) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.4) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.4) lib/rails/engine/lazy_route_set.rb:93:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.7) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.7) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.7) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.7) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.4) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+activerecord (8.1.4) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.4) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.4) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.7) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.7) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.7) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/host_authorization.rb:144:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.4) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (8.0.2) lib/puma/configuration.rb:305:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (8.0.2) lib/puma/response.rb:79:in 'block in Puma::Response#handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in 'Puma::ThreadPool#with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in 'Puma::Response#handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in 'Puma::Server#process_client'
+puma (8.0.2) lib/puma/server.rb:263:in 'block in Puma::Server#run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/posts/5" for ::1 at 2026-10-04 00:45:12 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 5 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:34:in 'PostsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:45:12 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'new' for nil):
+  
+activestorage (8.1.4) app/models/active_storage/variation.rb:85:in 'ActiveStorage::Variation#transformer'
+activestorage (8.1.4) app/models/active_storage/variation.rb:58:in 'block in ActiveStorage::Variation#transform'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+activestorage (8.1.4) app/models/active_storage/variation.rb:57:in 'ActiveStorage::Variation#transform'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:49:in 'block in ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) lib/active_storage/downloader.rb:15:in 'block in ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/downloader.rb:24:in 'ActiveStorage::Downloader#open_tempfile'
+activestorage (8.1.4) lib/active_storage/downloader.rb:12:in 'ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/service.rb:92:in 'ActiveStorage::Service#open'
+activestorage (8.1.4) app/models/active_storage/blob.rb:320:in 'ActiveStorage::Blob#open'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:48:in 'ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:44:in 'ActiveStorage::VariantWithRecord#process'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:19:in 'ActiveStorage::VariantWithRecord#processed'
+activestorage (8.1.4) app/controllers/active_storage/representations/base_controller.rb:14:in 'ActiveStorage::Representations::BaseController#set_representation'
+activesupport (8.1.4) lib/active_support/callbacks.rb:362:in 'block in ActiveSupport::Callbacks::CallTemplate::MethodCall#make_lambda'
+activesupport (8.1.4) lib/active_support/callbacks.rb:179:in 'block in ActiveSupport::Callbacks::Filters::Before#call'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:36:in 'block (2 levels) in <module:Callbacks>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:180:in 'ActiveSupport::Callbacks::Filters::Before#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'block in ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'Array#each'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:119:in 'block in ActiveSupport::Callbacks#run_callbacks'
+turbo-rails (2.0.23) lib/turbo-rails.rb:24:in 'Turbo.with_request_id'
+turbo-rails (2.0.23) app/controllers/concerns/turbo/request_id_tracking.rb:10:in 'Turbo::RequestIdTracking#turbo_tracking_request_id'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.1.4) lib/action_text/rendering.rb:24:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.1.4) lib/action_text/engine.rb:72:in 'block (4 levels) in <class:Engine>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'BasicObject#instance_exec'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.1.4) lib/active_support/callbacks.rb:141:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:266:in 'AbstractController::Callbacks#process_action'
+actionpack (8.1.4) lib/action_controller/metal/rescue.rb:36:in 'ActionController::Rescue#process_action'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.1.4) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.1.4) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.1.4) lib/abstract_controller/base.rb:154:in 'AbstractController::Base#process'
+actionview (8.1.4) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.4) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.4) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.4) lib/rails/engine/lazy_route_set.rb:93:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.7) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.7) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.7) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.7) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.4) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+activerecord (8.1.4) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.4) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.4) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.7) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.7) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.7) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/host_authorization.rb:144:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.4) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (8.0.2) lib/puma/configuration.rb:305:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (8.0.2) lib/puma/response.rb:79:in 'block in Puma::Response#handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in 'Puma::ThreadPool#with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in 'Puma::Response#handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in 'Puma::Server#process_client'
+puma (8.0.2) lib/puma/server.rb:263:in 'block in Puma::Server#run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/posts" for ::1 at 2026-10-04 00:45:33 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  Rendered posts/_post.html.erb (Duration: 18.1ms | GC: 2.7ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.4ms | GC: 2.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | GC: 2.9ms)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 1.4ms (6 queries, 0 cached) | GC: 2.9ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fZmlsbCI6WzMwMCwzMDBdfSwicHVyIjoidmFyaWF0aW9uIn19--79a62077dead337e5b459281e10a05875b42b25b/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:45:33 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'L1MMXafxf8Ly1sUvw0i0CYc/NCY=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+NoMethodError (undefined method 'new' for nil):
+  
+activestorage (8.1.4) app/models/active_storage/variation.rb:85:in 'ActiveStorage::Variation#transformer'
+activestorage (8.1.4) app/models/active_storage/variation.rb:58:in 'block in ActiveStorage::Variation#transform'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+activestorage (8.1.4) app/models/active_storage/variation.rb:57:in 'ActiveStorage::Variation#transform'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:49:in 'block in ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) lib/active_storage/downloader.rb:15:in 'block in ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/downloader.rb:24:in 'ActiveStorage::Downloader#open_tempfile'
+activestorage (8.1.4) lib/active_storage/downloader.rb:12:in 'ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/service.rb:92:in 'ActiveStorage::Service#open'
+activestorage (8.1.4) app/models/active_storage/blob.rb:320:in 'ActiveStorage::Blob#open'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:48:in 'ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:44:in 'ActiveStorage::VariantWithRecord#process'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:19:in 'ActiveStorage::VariantWithRecord#processed'
+activestorage (8.1.4) app/controllers/active_storage/representations/base_controller.rb:14:in 'ActiveStorage::Representations::BaseController#set_representation'
+activesupport (8.1.4) lib/active_support/callbacks.rb:362:in 'block in ActiveSupport::Callbacks::CallTemplate::MethodCall#make_lambda'
+activesupport (8.1.4) lib/active_support/callbacks.rb:179:in 'block in ActiveSupport::Callbacks::Filters::Before#call'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:36:in 'block (2 levels) in <module:Callbacks>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:180:in 'ActiveSupport::Callbacks::Filters::Before#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'block in ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'Array#each'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:119:in 'block in ActiveSupport::Callbacks#run_callbacks'
+turbo-rails (2.0.23) lib/turbo-rails.rb:24:in 'Turbo.with_request_id'
+turbo-rails (2.0.23) app/controllers/concerns/turbo/request_id_tracking.rb:10:in 'Turbo::RequestIdTracking#turbo_tracking_request_id'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.1.4) lib/action_text/rendering.rb:24:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.1.4) lib/action_text/engine.rb:72:in 'block (4 levels) in <class:Engine>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'BasicObject#instance_exec'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.1.4) lib/active_support/callbacks.rb:141:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:266:in 'AbstractController::Callbacks#process_action'
+actionpack (8.1.4) lib/action_controller/metal/rescue.rb:36:in 'ActionController::Rescue#process_action'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.1.4) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.1.4) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.1.4) lib/abstract_controller/base.rb:154:in 'AbstractController::Base#process'
+actionview (8.1.4) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.4) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.4) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.4) lib/rails/engine/lazy_route_set.rb:93:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.7) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.7) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.7) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.7) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.4) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+activerecord (8.1.4) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.4) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.4) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.7) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.7) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.7) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/host_authorization.rb:144:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.4) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (8.0.2) lib/puma/configuration.rb:305:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (8.0.2) lib/puma/response.rb:79:in 'block in Puma::Response#handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in 'Puma::ThreadPool#with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in 'Puma::Response#handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in 'Puma::Server#process_client'
+puma (8.0.2) lib/puma/server.rb:263:in 'block in Puma::Server#run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/posts" for ::1 at 2026-10-04 00:45:52 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  Rendered posts/_post.html.erb (Duration: 16.7ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 1.5ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fZmlsbCI6WzMwMCwzMDBdfSwicHVyIjoidmFyaWF0aW9uIn19--79a62077dead337e5b459281e10a05875b42b25b/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:45:52 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'L1MMXafxf8Ly1sUvw0i0CYc/NCY=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'new' for nil):
+  
+activestorage (8.1.4) app/models/active_storage/variation.rb:85:in 'ActiveStorage::Variation#transformer'
+activestorage (8.1.4) app/models/active_storage/variation.rb:58:in 'block in ActiveStorage::Variation#transform'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+activestorage (8.1.4) app/models/active_storage/variation.rb:57:in 'ActiveStorage::Variation#transform'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:49:in 'block in ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) lib/active_storage/downloader.rb:15:in 'block in ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/downloader.rb:24:in 'ActiveStorage::Downloader#open_tempfile'
+activestorage (8.1.4) lib/active_storage/downloader.rb:12:in 'ActiveStorage::Downloader#open'
+activestorage (8.1.4) lib/active_storage/service.rb:92:in 'ActiveStorage::Service#open'
+activestorage (8.1.4) app/models/active_storage/blob.rb:320:in 'ActiveStorage::Blob#open'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:48:in 'ActiveStorage::VariantWithRecord#transform_blob'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:44:in 'ActiveStorage::VariantWithRecord#process'
+activestorage (8.1.4) app/models/active_storage/variant_with_record.rb:19:in 'ActiveStorage::VariantWithRecord#processed'
+activestorage (8.1.4) app/controllers/active_storage/representations/base_controller.rb:14:in 'ActiveStorage::Representations::BaseController#set_representation'
+activesupport (8.1.4) lib/active_support/callbacks.rb:362:in 'block in ActiveSupport::Callbacks::CallTemplate::MethodCall#make_lambda'
+activesupport (8.1.4) lib/active_support/callbacks.rb:179:in 'block in ActiveSupport::Callbacks::Filters::Before#call'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:36:in 'block (2 levels) in <module:Callbacks>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:180:in 'ActiveSupport::Callbacks::Filters::Before#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'block in ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'Array#each'
+activesupport (8.1.4) lib/active_support/callbacks.rb:560:in 'ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.4) lib/active_support/callbacks.rb:119:in 'block in ActiveSupport::Callbacks#run_callbacks'
+turbo-rails (2.0.23) lib/turbo-rails.rb:24:in 'Turbo.with_request_id'
+turbo-rails (2.0.23) app/controllers/concerns/turbo/request_id_tracking.rb:10:in 'Turbo::RequestIdTracking#turbo_tracking_request_id'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.1.4) lib/action_text/rendering.rb:24:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.1.4) lib/action_text/engine.rb:72:in 'block (4 levels) in <class:Engine>'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'BasicObject#instance_exec'
+activesupport (8.1.4) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.1.4) lib/active_support/callbacks.rb:141:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/abstract_controller/callbacks.rb:266:in 'AbstractController::Callbacks#process_action'
+actionpack (8.1.4) lib/action_controller/metal/rescue.rb:36:in 'ActionController::Rescue#process_action'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.4) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.4) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.1.4) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.1.4) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.1.4) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.1.4) lib/abstract_controller/base.rb:154:in 'AbstractController::Base#process'
+actionview (8.1.4) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.4) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.4) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.4) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.4) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.4) lib/rails/engine/lazy_route_set.rb:93:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.7) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.7) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.7) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.7) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.4) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+activerecord (8.1.4) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.4) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.4) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.4) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.4) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.7) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.7) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.4) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.7) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.4) lib/action_dispatch/middleware/host_authorization.rb:144:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.4) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (8.0.2) lib/puma/configuration.rb:305:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (8.0.2) lib/puma/response.rb:79:in 'block in Puma::Response#handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in 'Puma::ThreadPool#with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in 'Puma::Response#handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in 'Puma::Server#process_client'
+puma (8.0.2) lib/puma/server.rb:263:in 'block in Puma::Server#run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/posts" for ::1 at 2026-10-04 00:48:49 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ActiveStoragePractice'*/[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  Rendered posts/_post.html.erb (Duration: 16.3ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 22.1ms | ActiveRecord: 0.9ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fZmlsbCI6WzMwMCwzMDBdfSwicHVyIjoidmFyaWF0aW9uIn19--79a62077dead337e5b459281e10a05875b42b25b/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:48:49 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'L1MMXafxf8Ly1sUvw0i0CYc/NCY=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_variant_records" ("blob_id", "variation_digest") VALUES (1, 'L1MMXafxf8Ly1sUvw0i0CYc/NCY=') RETURNING "id" /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Create (0.0ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ('s0xqqxnq7ogttvgvvilou09juqrl', 'スクリーンショット 2026-07-24 9.52.56.png', 'image/png', '{"identified":true}', 'local', 68172, '57Ru5FvAzlSIlrf0ahF4IQ==', '2026-10-03 15:48:49.547347') RETURNING "id" /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ('image', 'ActiveStorage::VariantRecord', 1, 2, '2026-10-03 15:48:49.548597') RETURNING "id" /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.3ms) [0m[32mUploaded file to key: s0xqqxnq7ogttvgvvilou09juqrl (checksum: 57Ru5FvAzlSIlrf0ahF4IQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 011e3854-b0f9-4fd6-88cc-d49351bc8f5b) to Async(default) with arguments: #<GlobalID:0x000000012af3ab30 @uri=#<URI::GID gid://active-storage-practice/ActiveStorage::Blob/2>>
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: s0xqqxnq7ogttvgvvilou09juqrl (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzMHhxcXhucTdvZ3R0dmd2dmlsb3UwOWp1cXJsIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjUzOjQ5LjU1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--776371df9d89fa0d5cae01a7d5460741569825e1/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzMHhxcXhucTdvZ3R0dmd2dmlsb3UwOWp1cXJsIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjUzOjQ5LjU1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--776371df9d89fa0d5cae01a7d5460741569825e1/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png
+Completed 302 Found in 101ms (ActiveRecord: 1.4ms (7 queries, 0 cached) | GC: 10.7ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 2 LIMIT 1 /*application='ActiveStoragePractice'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b] Performing ActiveStorage::AnalyzeJob (Job ID: 011e3854-b0f9-4fd6-88cc-d49351bc8f5b) from Async(default) enqueued at 2026-10-03T15:48:49.557753000Z with arguments: #<GlobalID:0x000000012ae55418 @uri=#<URI::GID gid://active-storage-practice/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: s0xqqxnq7ogttvgvvilou09juqrl[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzMHhxcXhucTdvZ3R0dmd2dmlsb3UwOWp1cXJsIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjUzOjQ5LjU1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--776371df9d89fa0d5cae01a7d5460741569825e1/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:48:49 +0900
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = '{"identified":true,"width":300,"height":300,"analyzed":true}' WHERE "active_storage_blobs"."id" = 2 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b]   [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = 2 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b]   [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = 1 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [011e3854-b0f9-4fd6-88cc-d49351bc8f5b] Performed ActiveStorage::AnalyzeJob (Job ID: 011e3854-b0f9-4fd6-88cc-d49351bc8f5b) from Async(default) in 5.81ms
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2026-10-04 00:49:24 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: kli4vyve348p08ust980lcyfou8n[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::VariantRecord Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_variant_records" ("blob_id", "variation_digest") VALUES (1, 'v6IuqLJQWEPGNKISml/oZSS7Cdo=') RETURNING "id" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::Blob Create (0.0ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ('yo3z6fj4rod0rwgvgw7hmaoe9bps', 'スクリーンショット 2026-07-24 9.52.56.png', 'image/png', '{"identified":true}', 'local', 35873, '0NTu+D92sWTwOX7YOK/1Wg==', '2026-10-03 15:49:24.164218') RETURNING "id" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::Attachment Create (0.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ('image', 'ActiveStorage::VariantRecord', 2, 3, '2026-10-03 15:49:24.164813') RETURNING "id" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+[36m  Disk Storage (0.3ms) [0m[32mUploaded file to key: yo3z6fj4rod0rwgvgw7hmaoe9bps (checksum: 0NTu+D92sWTwOX7YOK/1Wg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 860a5bd5-9853-41a9-bcb1-0847be23b5fd) to Async(default) with arguments: #<GlobalID:0x000000012bdb7370 @uri=#<URI::GID gid://active-storage-practice/ActiveStorage::Blob/3>>
+[ActiveJob] ↳ app/views/posts/_post.html.erb:7
+  Rendered posts/_post.html.erb (Duration: 61.8ms | GC: 14.8ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 62.4ms | GC: 14.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | GC: 14.8ms)
+Completed 200 OK in 68ms (Views: 62.0ms | ActiveRecord: 2.4ms (12 queries, 0 cached) | GC: 14.8ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd]   [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 3 LIMIT 1 /*application='ActiveStoragePractice'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd] Performing ActiveStorage::AnalyzeJob (Job ID: 860a5bd5-9853-41a9-bcb1-0847be23b5fd) from Async(default) enqueued at 2026-10-03T15:49:24.166670000Z with arguments: #<GlobalID:0x000000012b1753f0 @uri=#<URI::GID gid://active-storage-practice/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: yo3z6fj4rod0rwgvgw7hmaoe9bps[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = '{"identified":true,"width":300,"height":134,"analyzed":true}' WHERE "active_storage_blobs"."id" = 3 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd]   [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = 3 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd]   [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."id" = 2 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [860a5bd5-9853-41a9-bcb1-0847be23b5fd] Performed ActiveStorage::AnalyzeJob (Job ID: 860a5bd5-9853-41a9-bcb1-0847be23b5fd) from Async(default) in 8.3ms
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:49:24 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 3 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: yo3z6fj4rod0rwgvgw7hmaoe9bps (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bzN6NmZqNHJvZDByd2d2Z3c3aG1hb2U5YnBzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjU0OjI0LjIwOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d1a4760b01f2323d8c08432bc0845ed8965eec5a/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bzN6NmZqNHJvZDByd2d2Z3c3aG1hb2U5YnBzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjU0OjI0LjIwOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d1a4760b01f2323d8c08432bc0845ed8965eec5a/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bzN6NmZqNHJvZDByd2d2Z3c3aG1hb2U5YnBzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjU0OjI0LjIwOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d1a4760b01f2323d8c08432bc0845ed8965eec5a/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:49:24 +0900
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2026-10-04 00:49:42 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  Rendered posts/_post.html.erb (Duration: 30.1ms | GC: 8.2ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 30.5ms | GC: 8.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | GC: 8.4ms)
+Completed 200 OK in 37ms (Views: 31.3ms | ActiveRecord: 1.9ms (7 queries, 0 cached) | GC: 8.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bzN6NmZqNHJvZDByd2d2Z3c3aG1hb2U5YnBzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjU0OjI0LjIwOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d1a4760b01f2323d8c08432bc0845ed8965eec5a/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:49:43 +0900
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts/5" for ::1 at 2026-10-04 00:52:47 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 5 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:34:in 'PostsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/show.html.erb:6
+  [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/show.html.erb:6
+  Rendered posts/show.html.erb within layouts/application (Duration: 14.1ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | GC: 0.4ms)
+Completed 200 OK in 30ms (Views: 16.4ms | ActiveRecord: 1.8ms (4 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/posts/5/edit" for ::1 at 2026-10-04 00:52:49 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 5 LIMIT 1 /*action='edit',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:21:in 'PostsController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.3ms | GC: 0.0ms)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 6.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
