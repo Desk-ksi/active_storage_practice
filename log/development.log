@@ -1860,3 +1860,131 @@ FOREIGN KEY ("blob_id")
   [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20261003142433') RETURNING "version" /*application='ActiveStoragePractice'*/[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ActiveStoragePractice'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ActiveStoragePractice'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/" for ::1 at 2026-10-04 00:01:03 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ActiveStoragePractice'*/[0m
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 9.2ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-10-04 00:11:51 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 6.2ms | GC: 0.0ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 9.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-10-04 00:12:11 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.2ms | GC: 0.0ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-10-04 00:12:26 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | GC: 16.1ms)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 16.1ms)
+
+
+Started POST "/posts" for ::1 at 2026-10-04 00:13:07 +0900
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "post" => {"title" => "test_test_1", "body" => "test_test_1", "image" => #<ActionDispatch::Http::UploadedFile:0x0000000126b94480 @tempfile=#<Tempfile:/var/folders/41/b2_n0_y90_bbhbqh5lx04_gm0000gn/T/RackMultipart20261004-25790-xdkomk.png>, @content_type="image/png", @original_filename="スクリーンショット 2026-07-24 9.52.56.png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"スクリーンショット 2026-07-24 9.52.56.png\"\r\nContent-Type: image/png\r\n">}, "commit" => "投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES ('test_test_1', 'test_test_1', '2026-10-03 15:13:07.722354', '2026-10-03 15:13:07.722354') RETURNING "id" /*action='create',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='create',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='create',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ('kli4vyve348p08ust980lcyfou8n', 'スクリーンショット 2026-07-24 9.52.56.png', 'image/png', '{"identified":true}', 'local', 793493, 'MmHJsme8yAnk9Ms7sowpqA==', '2026-10-03 15:13:07.751885') RETURNING "id" /*action='create',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+  [1m[36mActiveStorage::Attachment Create (0.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ('image', 'Post', 5, 1, '2026-10-03 15:13:07.752705') RETURNING "id" /*action='create',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+  [1m[36mPost Update (0.0ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = '2026-10-03 15:13:07.753142' WHERE "posts"."id" = 5 /*action='create',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: kli4vyve348p08ust980lcyfou8n (checksum: MmHJsme8yAnk9Ms7sowpqA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: d1ec0575-9151-428d-9ce6-c5464c2f58c1) to Async(default) with arguments: #<GlobalID:0x000000012711a878 @uri=#<URI::GID gid://active-storage-practice/ActiveStorage::Blob/1>>
+[ActiveJob] ↳ app/controllers/posts_controller.rb:9:in 'PostsController#create'
+Redirected to http://localhost:3000/posts
+↳ app/controllers/posts_controller.rb:10:in 'PostsController#create'
+Completed 302 Found in 87ms (ActiveRecord: 3.7ms (6 queries, 0 cached) | GC: 3.2ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*application='ActiveStoragePractice'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1] Performing ActiveStorage::AnalyzeJob (Job ID: d1ec0575-9151-428d-9ce6-c5464c2f58c1) from Async(default) enqueued at 2026-10-03T15:13:07.774002000Z with arguments: #<GlobalID:0x00000001270d7d98 @uri=#<URI::GID gid://active-storage-practice/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = '{"identified":true,"analyzed":true}' WHERE "active_storage_blobs"."id" = 1 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1]   [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = 1 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1]   [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 5 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1]   [1m[36mPost Update (0.0ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = '2026-10-03 15:13:07.782871' WHERE "posts"."id" = 5 /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ActiveStoragePractice',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d1ec0575-9151-428d-9ce6-c5464c2f58c1] Performed ActiveStorage::AnalyzeJob (Job ID: d1ec0575-9151-428d-9ce6-c5464c2f58c1) from Async(default) in 8.13ms
+Started GET "/posts" for ::1 at 2026-10-04 00:13:07 +0900
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  Rendered posts/_post.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.4ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2026-10-04 00:14:42 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:7
+  Rendered posts/_post.html.erb (Duration: 18.8ms | GC: 7.9ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.4ms | GC: 8.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | GC: 8.5ms)
+Completed 200 OK in 26ms (Views: 20.6ms | ActiveRecord: 1.5ms (6 queries, 0 cached) | GC: 10.4ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:14:42 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: kli4vyve348p08ust980lcyfou8n (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJrbGk0dnl2ZTM0OHAwOHVzdDk4MGxjeWZvdThuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjE5OjQyLjEzMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26c09c7526f774fbcf4e49fba15cbf82efc73d3b/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJrbGk0dnl2ZTM0OHAwOHVzdDk4MGxjeWZvdThuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjE5OjQyLjEzMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26c09c7526f774fbcf4e49fba15cbf82efc73d3b/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJrbGk0dnl2ZTM0OHAwOHVzdDk4MGxjeWZvdThuIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTAzVDE1OjE5OjQyLjEzMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26c09c7526f774fbcf4e49fba15cbf82efc73d3b/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-04 00:14:42 +0900
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
