@@ -4320,3 +4320,335 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for ::1 at 2026-10-06 18:22:37 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.4ms | GC: 0.0ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2026-10-06 18:22:51 +0900
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "post" => {"title" => "te", "body" => "te", "image" => #<ActionDispatch::Http::UploadedFile:0x0000000129884030 @tempfile=#<Tempfile:/var/folders/41/b2_n0_y90_bbhbqh5lx04_gm0000gn/T/RackMultipart20261006-80011-ge8o2k.png>, @content_type="image/png", @original_filename="スクリーンショット 2026-07-24 9.52.56.png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"スクリーンショット 2026-07-24 9.52.56.png\"\r\nContent-Type: image/png\r\n">, "images" => ["", #<ActionDispatch::Http::UploadedFile:0x0000000129721af8 @tempfile=#<Tempfile:/var/folders/41/b2_n0_y90_bbhbqh5lx04_gm0000gn/T/RackMultipart20261006-80011-a1onoo.png>, @content_type="image/png", @original_filename="スクリーンショット 2026-07-24 9.52.56.png", @headers="Content-Disposition: form-data; name=\"post[images][]\"; filename=\"スクリーンショット 2026-07-24 9.52.56.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x000000012964e568 @tempfile=#<Tempfile:/var/folders/41/b2_n0_y90_bbhbqh5lx04_gm0000gn/T/RackMultipart20261006-80011-nae8gw.png>, @content_type="image/png", @original_filename="スクリーンショット 2026-07-31 12.56.11.png", @headers="Content-Disposition: form-data; name=\"post[images][]\"; filename=\"スクリーンショット 2026-07-31 12.56.11.png\"\r\nContent-Type: image/png\r\n">]}, "commit" => "投稿"}
+Completed 500 Internal Server Error in 364546ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 154.0ms)
+
+
+  
+SystemExit (exit):
+  
+(rdbg)//Users/daisuke/mini_app/active_storage_practice/app/controllers/posts_controller.rb:1:in 'Kernel#exit'
+(rdbg)//Users/daisuke/mini_app/active_storage_practice/app/controllers/posts_controller.rb:1:in 'PostsController#create'
+app/controllers/posts_controller.rb:9:in 'PostsController#create'
+Started GET "/" for ::1 at 2026-10-06 18:29:04 +0900
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2026-10-06 18:30:01 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (13.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:8
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:8
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 6 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 6 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 7 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 7 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 4 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 5 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 9 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 9 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 9 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 8 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:12
+  Rendered posts/_post.html.erb (Duration: 36.2ms | GC: 1.2ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 36.9ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | GC: 1.2ms)
+Completed 200 OK in 45ms (Views: 24.6ms | ActiveRecord: 14.7ms (24 queries, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-06 18:30:02 +0900
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--5477a060cbacf5e1c39baa0b454bf9fa9adb7e39/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png" for ::1 at 2026-10-06 18:30:02 +0900
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--567452b30b80d1b75564a588de0d9ccc96c9b660/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-06 18:30:02 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--cb57e47eeb2dff2f7b67fc3020c40c70e8764e1e", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--5477a060cbacf5e1c39baa0b454bf9fa9adb7e39", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-31 12.56.11"}
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--567452b30b80d1b75564a588de0d9ccc96c9b660", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 3 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (1.8ms) [0m[34mGenerated URL for file at key: yo3z6fj4rod0rwgvgw7hmaoe9bps (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bzN6NmZqNHJvZDByd2d2Z3c3aG1hb2U5YnBzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA2VDA5OjM1OjAyLjE2MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--83c5dcf247e4a73bcd6afd952f0741fa6e4fa6a5/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bzN6NmZqNHJvZDByd2d2Z3c3aG1hb2U5YnBzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA2VDA5OjM1OjAyLjE2MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--83c5dcf247e4a73bcd6afd952f0741fa6e4fa6a5/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png
+Completed 302 Found in 14ms (ActiveRecord: 0.3ms (4 queries, 0 cached) | GC: 0.2ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 5 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 5 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 4 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 7 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 2fxfgeeu11lpv9tpadom1uls74g2 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZnhmZ2VldTExbHB2OXRwYWRvbTF1bHM3NGcyIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDZUMDk6MzU6MDIuMTcyWiIsInB1ciI6ImJsb2Jfa2V5In19--fb133048ca1803fa04732a687af3d04018e9394e/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZnhmZ2VldTExbHB2OXRwYWRvbTF1bHM3NGcyIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDZUMDk6MzU6MDIuMTcyWiIsInB1ciI6ImJsb2Jfa2V5In19--fb133048ca1803fa04732a687af3d04018e9394e/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 4 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+Completed 302 Found in 23ms (ActiveRecord: 0.4ms (4 queries, 0 cached) | GC: 0.8ms)
+
+
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 4 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 6 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: doiy1th9qmiqkafi4flbrqgfh9ew (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkb2l5MXRoOXFtaXFrYWZpNGZsYnJxZ2ZoOWV3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA2VDA5OjM1OjAyLjE4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a6628d4f8eeea2acfc8a651594c38f85441c170d/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkb2l5MXRoOXFtaXFrYWZpNGZsYnJxZ2ZoOWV3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA2VDA5OjM1OjAyLjE4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a6628d4f8eeea2acfc8a651594c38f85441c170d/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png
+Completed 302 Found in 30ms (ActiveRecord: 0.3ms (4 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6OCwicHVyIjoiYmxvYl9pZCJ9fQ==--22c11856f15476f78b2851a79ad8977dc6742b24/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png" for ::1 at 2026-10-06 18:30:02 +0900
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bzN6NmZqNHJvZDByd2d2Z3c3aG1hb2U5YnBzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA2VDA5OjM1OjAyLjE2MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--83c5dcf247e4a73bcd6afd952f0741fa6e4fa6a5/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-06 18:30:02 +0900
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZnhmZ2VldTExbHB2OXRwYWRvbTF1bHM3NGcyIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDZUMDk6MzU6MDIuMTcyWiIsInB1ciI6ImJsb2Jfa2V5In19--fb133048ca1803fa04732a687af3d04018e9394e/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png" for ::1 at 2026-10-06 18:30:02 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6OCwicHVyIjoiYmxvYl9pZCJ9fQ==--22c11856f15476f78b2851a79ad8977dc6742b24", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-31 12.56.11"}
+Processing by ActiveStorage::DiskController#show as PNG
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-31 12.56.11"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 8 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 8 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 9 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: 2r1fx154ov6zc8uthd4z3t0axjue (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycjFmeDE1NG92NnpjOHV0aGQ0ejN0MGF4anVlIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDZUMDk6MzU6MDIuMTk3WiIsInB1ciI6ImJsb2Jfa2V5In19--a164ef28dae619d21de83adf78ef3cbdf3e012f2/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycjFmeDE1NG92NnpjOHV0aGQ0ejN0MGF4anVlIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDZUMDk6MzU6MDIuMTk3WiIsInB1ciI6ImJsb2Jfa2V5In19--a164ef28dae619d21de83adf78ef3cbdf3e012f2/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkb2l5MXRoOXFtaXFrYWZpNGZsYnJxZ2ZoOWV3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA2VDA5OjM1OjAyLjE4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a6628d4f8eeea2acfc8a651594c38f85441c170d/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-06 18:30:02 +0900
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycjFmeDE1NG92NnpjOHV0aGQ0ejN0MGF4anVlIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDZUMDk6MzU6MDIuMTk3WiIsInB1ciI6ImJsb2Jfa2V5In19--a164ef28dae619d21de83adf78ef3cbdf3e012f2/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png" for ::1 at 2026-10-06 18:30:02 +0900
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-31 12.56.11"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts/1" for ::1 at 2026-10-06 18:30:03 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:34:in 'PostsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/show.html.erb:5
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2026-10-06 18:30:04 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:34:in 'PostsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/show.html.erb:5
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts/8" for ::1 at 2026-10-06 18:30:09 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id" => "8"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 8 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:34:in 'PostsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/show.html.erb:5
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2026-10-06 18:30:11 +0900
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:8
+  [1m[36mActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 1 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:8
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 6 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 6 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 7 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 7 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 4 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 5 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 9 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:6
+  [1m[36mActiveStorage::Attachment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 9 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 9 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 8 LIMIT 1 /*action='index',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_post.html.erb:12
+  Rendered posts/_post.html.erb (Duration: 44.7ms | GC: 23.9ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 44.9ms | GC: 23.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | GC: 23.9ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 1.4ms (24 queries, 0 cached) | GC: 23.9ms)
+
+
+Started GET "/posts/8/edit" for ::1 at 2026-10-06 18:30:11 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id" => "8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 8 LIMIT 1 /*action='edit',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:21:in 'PostsController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts/8/edit" for ::1 at 2026-10-07 22:48:39 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id" => "8"}
+  [1m[36mPost Load (28.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 8 LIMIT 1 /*action='edit',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:21:in 'PostsController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='edit',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_form.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 8 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'images' /*action='edit',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_form.html.erb:20
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 4 LIMIT 1 /*action='edit',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_form.html.erb:22
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 5 LIMIT 1 /*action='edit',application='ActiveStoragePractice',controller='posts'*/[0m
+  ↳ app/views/posts/_form.html.erb:22
+  Rendered posts/_form.html.erb (Duration: 19.3ms | GC: 1.8ms)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 20.1ms | GC: 1.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | GC: 2.0ms)
+Completed 200 OK in 65ms (Views: 22.5ms | ActiveRecord: 28.8ms (5 queries, 0 cached) | GC: 4.0ms)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--5477a060cbacf5e1c39baa0b454bf9fa9adb7e39/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png" for ::1 at 2026-10-07 22:48:39 +0900
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--567452b30b80d1b75564a588de0d9ccc96c9b660/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5025b620ac3327f3e234f95e56ef10a2692f2fc0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-07 22:48:39 +0900
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--567452b30b80d1b75564a588de0d9ccc96c9b660", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+  Parameters: {"signed_blob_id" => "eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--5477a060cbacf5e1c39baa0b454bf9fa9adb7e39", "variation_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-31 12.56.11"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 5 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 4 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.7ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 5 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = 4 AND "active_storage_variant_records"."variation_digest" = 'v6IuqLJQWEPGNKISml/oZSS7Cdo=' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 4 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'ActiveStorage::VariantRecord' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 7 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 6 LIMIT 1 /*action='show',application='ActiveStoragePractice',controller='redirect'*/[0m
+[36m  Disk Storage (2.9ms) [0m[34mGenerated URL for file at key: 2fxfgeeu11lpv9tpadom1uls74g2 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZnhmZ2VldTExbHB2OXRwYWRvbTF1bHM3NGcyIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDdUMTM6NTM6MzkuNzI4WiIsInB1ciI6ImJsb2Jfa2V5In19--d0682488ccf5653e3c15747eaa92d50cd55f4fb2/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png)[0m
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: doiy1th9qmiqkafi4flbrqgfh9ew (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkb2l5MXRoOXFtaXFrYWZpNGZsYnJxZ2ZoOWV3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA3VDEzOjUzOjM5LjczNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6bb7ea7d183bdc9acd4ffb57c20cd89dcbd5d1d0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZnhmZ2VldTExbHB2OXRwYWRvbTF1bHM3NGcyIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDdUMTM6NTM6MzkuNzI4WiIsInB1ciI6ImJsb2Jfa2V5In19--d0682488ccf5653e3c15747eaa92d50cd55f4fb2/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkb2l5MXRoOXFtaXFrYWZpNGZsYnJxZ2ZoOWV3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA3VDEzOjUzOjM5LjczNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6bb7ea7d183bdc9acd4ffb57c20cd89dcbd5d1d0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png
+Completed 302 Found in 58ms (ActiveRecord: 1.7ms (4 queries, 0 cached) | GC: 4.9ms)
+
+
+Completed 302 Found in 65ms (ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 8.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkb2l5MXRoOXFtaXFrYWZpNGZsYnJxZ2ZoOWV3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMjQgOS41Mi41Ni5wbmdcIjsgZmlsZW5hbWUqPVVURi04JyclRTMlODIlQjklRTMlODIlQUYlRTMlODMlQUElRTMlODMlQkMlRTMlODMlQjMlRTMlODIlQjclRTMlODMlQTclRTMlODMlODMlRTMlODMlODglMjAyMDI2LTA3LTI0JTIwOS41Mi41Ni5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTEwLTA3VDEzOjUzOjM5LjczNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6bb7ea7d183bdc9acd4ffb57c20cd89dcbd5d1d0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-24%209.52.56.png" for ::1 at 2026-10-07 22:48:39 +0900
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZnhmZ2VldTExbHB2OXRwYWRvbTF1bHM3NGcyIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGJTNGIDIwMjYtMDctMzEgMTIuNTYuMTEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnJUUzJTgyJUI5JUUzJTgyJUFGJUUzJTgzJUFBJUUzJTgzJUJDJUUzJTgzJUIzJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJTgzJUUzJTgzJTg4JTIwMjAyNi0wNy0zMSUyMDEyLjU2LjExLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjYtMTAtMDdUMTM6NTM6MzkuNzI4WiIsInB1ciI6ImJsb2Jfa2V5In19--d0682488ccf5653e3c15747eaa92d50cd55f4fb2/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-07-31%2012.56.11.png" for ::1 at 2026-10-07 22:48:39 +0900
+Processing by ActiveStorage::DiskController#show as PNG
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-31 12.56.11"}
+  Parameters: {"encoded_key" => "[FILTERED]", "filename" => "スクリーンショット 2026-07-24 9.52.56"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
